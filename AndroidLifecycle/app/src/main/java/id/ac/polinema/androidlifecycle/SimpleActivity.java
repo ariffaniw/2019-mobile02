@@ -24,6 +24,6 @@ public class SimpleActivity extends AppCompatActivity {
 
     public void handleSumbit(View view) {
         String name = nameInput.getText().toString();
-        outputText.setText("Hello" + name);
+        outputText.setText("Hello " + name);
     }
 }

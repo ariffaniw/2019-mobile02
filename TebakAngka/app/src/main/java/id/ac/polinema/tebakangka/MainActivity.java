@@ -12,7 +12,6 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-	//  TODO: deklarasikan variabel di sini
 	private int Inputan,angkaRandom;
 	private Random random;
 	private EditText InputanForm;
@@ -23,20 +22,19 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		// TODO: bind layout di sini
+
 		InputanForm = findViewById(R.id.number_input);
 		guessBtn = findViewById(R.id.guess_button);
 		random = new Random();
 		initRandomNumber();
 	}
 
-	// TODO: generate angka random di sini
 	private void initRandomNumber() {
 		angkaRandom = random.nextInt (100) + 1;
 	}
 
 	public void handleGuess(View view) {
-		// TODO: Tambahkan logika untuk melakukan pengecekan angka
+
 		String numInputString = InputanForm.getText().toString();
 		if (numInputString.equalsIgnoreCase( "")) {
 			Toast.makeText(  this,"Input harus berupa angka",Toast.LENGTH_SHORT).show();
@@ -55,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	public void handleReset(View view) {
-		// TODO: Reset tampilan
+
 		InputanForm.setText("");
 		initRandomNumber();
 		guessBtn.setEnabled(true);
